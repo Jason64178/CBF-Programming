@@ -1,0 +1,48 @@
+12:19:25.652 INFO [main] org.lenskit.cli.Main: Starting LensKit 3.0-M1 on Java 1.8.0_77 from Oracle Corporation
+12:19:25.687 DEBUG [main] org.lenskit.LenskitInfo: have 5573 active revisions
+12:19:25.695 DEBUG [main] org.lenskit.cli.Main: Built from Git revision c0210fa3281ef8b15b0959bcd5fced43c5fec38a
+12:19:25.696 DEBUG [main] org.lenskit.cli.Main: Using VM 'Java HotSpot(TM) 64-Bit Server VM' version 25.77-b03 from Oracle Corporation
+12:19:25.696 INFO [main] org.lenskit.cli.Main: Have 4 processors and heap limit of 1820 MiB
+12:19:25.719 INFO [main] org.lenskit.cli.util.RecommenderLoader: creating fresh recommender
+12:19:26.112 INFO [main] org.lenskit.config.ConfigurationLoader: loading script from file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/etc/basic.groovy
+12:19:26.909 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source ratings with base URI file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/movielens.yml
+12:19:26.909 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/ratings.csv
+12:19:26.926 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source ratings to read from file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/ratings.csv
+12:19:26.938 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: using delimiter ,
+12:19:26.938 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading header
+12:19:26.938 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: ratings: reading entities of type EntityType[rating]
+12:19:27.084 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.ratings.RatingBuilder: using entity builder {}
+12:19:27.084 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source movies with base URI file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/movielens.yml
+12:19:27.084 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/movies.csv
+12:19:27.084 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source movies to read from file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/movies.csv
+12:19:27.085 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: using delimiter ,
+12:19:27.085 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading header
+12:19:27.085 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: movies: reading entities of type EntityType[item]
+12:19:27.086 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
+12:19:27.086 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: loading source tags with base URI file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/movielens.yml
+12:19:27.087 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: resolved file URI: file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/tags.csv
+12:19:27.088 INFO [main] org.lenskit.data.dao.file.TextEntitySource: loading text file source tags to read from file:/Users/Xiasen/Documents/recommend%20system/course%201/week%204/cbf-assignment/data/tags.csv
+12:19:27.088 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: using delimiter ,
+12:19:27.088 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading header
+12:19:27.089 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: tags: reading entities of type EntityType[item-tag]
+12:19:27.094 DEBUG [main] org.lenskit.data.dao.file.TextEntitySource: class org.lenskit.data.entities.BasicEntityBuilder: using entity builder {}
+12:19:27.103 DEBUG [main] org.lenskit.LenskitRecommenderEngineBuilder: building graph from 3 configurations
+12:19:27.233 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: replacing nodes in graph with 14 nodes
+12:19:27.241 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: found 4 shared nodes
+12:19:28.793 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[user] from EntityType[rating] (column TypedName[user: long])
+12:19:29.698 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[item] from EntityType[rating] (column TypedName[item: long])
+12:19:29.737 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[user] from EntityType[item-tag] (column TypedName[user: long])
+12:19:29.779 INFO [main] org.lenskit.data.dao.file.StaticDataSource: deriving entity type EntityType[item] from EntityType[item-tag] (column TypedName[item: long])
+12:19:29.799 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 2500 entities with type EntityType[item] and 2 indexes
+12:19:29.837 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 264505 entities with type EntityType[rating] and 2 indexes
+12:19:29.867 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 94875 entities with type EntityType[item-tag] and 2 indexes
+12:19:29.868 DEBUG [main] org.lenskit.data.entities.EntityCollectionBuilder: built collection of 862 entities with type EntityType[user] and 2 indexes
+12:19:29.885 INFO [main] org.lenskit.mooc.cbf.TFIDFModelProvider: Building TF-IDF model
+12:19:29.986 INFO [main] org.lenskit.mooc.cbf.TFIDFModelProvider: Computed TF vectors for 2500 items
+12:19:30.079 DEBUG [main] org.lenskit.inject.RecommenderInstantiator: final graph has 14 nodes
+12:19:30.156 INFO [main] org.lenskit.cli.util.RecommenderLoader: built recommender in 3.053 s
+12:19:30.198 INFO [main] org.lenskit.cli.commands.Recommend: recommending for 1 users
+12:19:30.226 DEBUG [main] org.lenskit.basic.TopNItemRecommender: computing effective candidates for user 320 from 2500 candidates and 62 excluded items
+12:19:30.230 DEBUG [main] org.lenskit.basic.TopNItemRecommender: Computing 10 recommendations for user 320 from 2438 candidates
+12:19:30.577 INFO [main] org.lenskit.cli.commands.Recommend: recommended for 1 users in 379.3 ms
+12:19:30.578 INFO [main] org.lenskit.cli.Main: If you use LensKit in published research, please see http://lenskit.org/research/
